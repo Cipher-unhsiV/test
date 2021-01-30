@@ -1,3 +1,7 @@
+body {
+	color: green;
+	font: 40px;
+}
 h1 {
 	font: 20px;
 	text-align: center;
