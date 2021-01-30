@@ -1,249 +1,112 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<meta charset="utf-8">
-	<title>Vishnu_Portfolio_Website</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="login-page.css">
+  <script defer src="login-page.js"></script>
 </head>
-<style>
-	* {
-		box-sizing: border-box;
-	}
-	body {
-		margin: 0;
-		padding: 0;
-	}
-	h1 {
-		color: black;
-		text-align: center;
-	}
-	h2 {
-		margin-bottom: 20px;
-	}
-	p {
-		border: 1px solid black;
-  background-color: #A52A2A;
-  width: 90%;
-  height: 150px;
-  margin-right: auto;
-  margin-left: auto;
-  font-family: Helvetica;
+<style >
+  html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background-color: #3a3a3a;
+}
+
+#main-holder {
+  width: 50%;
+  height: 70%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 7px;
+  box-shadow: 0px 0px 5px 2px black;
+}
+
+#login-error-msg-holder {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+#login-error-msg {
+  width: 23%;
+  text-align: center;
+  margin: 0;
+  padding: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #8a0000;
+  border: 1px solid #8a0000;
+  background-color: #e58f8f;
+  opacity: 0;
+}
+
+#error-msg-second-line {
+  display: block;
+}
+
+#login-form {
+  align-self: flex-start;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.login-form-field::placeholder {
+  color: #3a3a3a;
+}
+
+.login-form-field {
+  border: none;
+  border-bottom: 1px solid #3a3a3a;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  outline: none;
+  padding: 0px 0px 5px 5px;
+}
+
+#login-form-submit {
+  width: 100%;
+  padding: 7px;
+  border: none;
+  border-radius: 5px;
   color: white;
-	}
-	h3 {
-		color: blue;
-		text-align: left;
-	}
-	h4 {
-		color: green;
-	}
-	h5 {
-		color: yellow;
-	}
-	.classno1{
-		background: black;
-		background-color: gray;
-	}
-	p.Blue{
-		color: blue;
-		text-align: center;
-	}
-	#box{
-		background-color: blue;
-		padding: 10px 10px 10px 10px;
-		border: 5px solid black;
-		margin: 40px;
-	}
-	#content{
-		background-color: green;
-	}
-	article > p{
-		text-align: right;
-	}
-	#img {
-		background: center center url(Vishnu.jpg);
-		background-repeat: no-repeat;
-		width: 500px;
-		height: 700px;
-	}
-
-
-	.row {
-		width: 100%;
-	}
-	@media (min-width: 1200px){
-		.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, {
-			float: left;
-			border: 1px solid brown;
-		}
-		.col-lg-1 {
-			width: 8.33%;
-		}
-		.col-lg-2 {
-			width: 16.66%;
-		}
-		.col-lg-3 {
-			width: 25%;
-		}
-		.col-lg-4 {
-			width: 33.33%;
-		}
-		.col-lg-5 {
-			width: 41.66%;
-		}
-		.col-lg-6 {
-			width: 50%;
-		}
-		.col-lg-7 {
-			width: 58.33%;
-		}
-		.col-lg-8 {
-			width: 66.66%;
-		}
-		.col-lg-9 {
-			width: 75%;
-		}
-		.col-lg-10 {
-			width: 83.33%;
-		}
-		.col-lg-11 {
-			width: 91.66%;
-		}
-		.col-lg-12 {
-			width: 100%;
-		}
-		@media (min-width: 992px) and (min-width: 1199px){
-		.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, {
-			float: left;
-			border: 1px solid brown;
-		}
-		.col-md-1 {
-			width: 8.33%;
-		}
-		.col-md-2 {
-			width: 16.66%;
-		}
-		.col-md-3 {
-			width: 25%;
-		}
-		.col-md-4 {
-			width: 33.33%;
-		}
-		.col-md-5 {
-			width: 41.66%;
-		}
-		.col-md-6 {
-			width: 50%;
-		}
-		.col-md-7 {
-			width: 58.33%;
-		}
-		.col-md-8 {
-			width: 66.66%;
-		}
-		.col-md-9 {
-			width: 75%;
-		}
-		.col-md-10 {
-			width: 83.33%;
-		}
-		.col-md-11 {
-			width: 91.66%;
-		}
-		.col-md-12 {
-			width: 100%;
-		}
-		
-	}
+  font-weight: bold;
+  background-color: #3a3a3a;
+  cursor: pointer;
+  outline: none;
+}
 </style>
+
 <body>
-<h1 style="color: blue;">Welcome to my Protfolio website!</h1>
-<h2>Responsive Layout</h2>
-
-<div class="row">
-  <div class="col-lg-3 col-md-6"><p>Item 1</p></div>
-  <div class="col-lg-3 col-md-6"><p>Item 2 Wow this is cool</p></div>
-  <div class="col-lg-3 col-md-6"><p>Item 3</p></div>
-  <div class="col-lg-3 col-md-6"><p>Item 4</p></div>
-  <div class="col-lg-3 col-md-6"><p>Item 5 This is cool</p></div>
-  <div class="col-lg-3 col-md-6"><p>Item 6</p></div>
-  <div class="col-lg-3 col-md-6"><p>Item 7</p></div>
-  <div class="col-lg-3 col-md-6"><p>Item 8</p></div>
-</div>
- 
- 
-
-
-
-
-
-
-
-
- 
-
-
-
-<h2>Box Model</h2>
-<div id="box">
-	<div id="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-</div>
-<div id="img">My image!</div>
-<h2>Address:-</h2>
-<p>No-29, S3, Second floor, Uttamam flats, 8th Avenue, Banu Nagar, Pudur, Ambattur, Chennai-600053, Tamil Nadu, INDIA.</p>
-<h2>Contact number:</h2>
-<p>+91 9840063842</p>
-<h2>Reach me:-</h2>
-<ul>
-	<li class="classno1">Github</li>
-	<li class="classno1">Instagram</li>
-	<li class="classno1">LinkedIn</li>
-	<li class="classno1">Twitter</li>
-	<li class="classno1">Stack Overflow</li>
-</ul>
-<H2>Education:-</H2>
-<ul>
-	<li>Sri Venkateswara College of Engineering.</li>
-	<ul>
-		<li>B.Tech in Artificial Intelligence and Data Science (first year).</li>
-		<li>2020-Present. Expected year of grad, 2024.</li>
-	</ul>
-	<li>Ebenezer Marcus International School.</li>
-    <ul>
-    	<li>Maths, Physics, English, C++. </li>
-    	<li>2018-2020.</li>
-    </ul>
-    <li>St.Patrick's High School.</li>
-    <ul>
-    	<li>Maths, Science(PCB), Social(HCG), JAVA.</li>
-    	<li>2015-2018</li>
-    </ul>
-</ul>
-<article>CHILD class
-<p>P under child. Effect right.</p>
-</article>
-<p class="Blue">This should be in blue color.(p/class)</p>
-<div class="Blue">This should not be in blue color.(div/class)</div>
-<h3>Techonologies:-</h3>
-<ul>
-	<li>JAVA</li>
-	<li>C & C++</li>
-	<li>Mdown</li>
-</ul>
-<h3>Certifications:-</h3>
-<ul>
-	<li> Hackerrank - Problem Solving (BASIC)</li>
-	<li> Udemy - C++ masterclass</li>
-	<li> Udemy - JS</li>
-	<li> Coursera - Web dev HTML, CSS, JS(Currently doing...)</li>
-</ul>
-<div style="font-size: 2em;">2em text
-	<div style="font-size: 2em;">4em text
-		<div style="font-size: .5em;">2em text
-		</div>
-	</div>
-</div>		
-<footer> vishnuvasants@gmail.com </footer>
-
+  <main id="main-holder">
+    <h1 id="login-header">Login</h1>
+    
+    <div id="login-error-msg-holder">
+      <p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span></p>
+    </div>
+    
+    <form id="login-form">
+      <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
+      <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
+      <input type="submit" value="Login" id="login-form-submit">
+    </form>
+  
+  </main>
 </body>
-</html>
 
+</html>
