@@ -68,22 +68,26 @@ h1 {
   margin: 25px;
 }
 #c {
-  position: relative;
+  
   top: 25px;
   padding-left: 17.2px;
 }
 #b {
-  position: relative;
+  
   top: 25px;
   padding-left: 17.2px;
 }
 #s {
-  position: relative;
+  
   top: 25px;
   padding-left: 17.2px;
 }
 .row {
   width: 100%;
+}
+#container {
+  position: relative;
+  
 }
 @media (min-width: 1200px)  {
   .col-lg-1 .col-lg-2 .col-lg-3 .col-lg-4 .col-lg-5 .col-lg-6 .col-lg-7 .col-lg-8 .col-lg-9 .col-lg-10 .col-lg-11 .col-lg-12 {
