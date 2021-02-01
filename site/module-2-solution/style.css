@@ -68,17 +68,17 @@ h1 {
   margin: 25px;
 }
 #c {
-  
+  position: relative;
   top: 25px;
   padding-left: 17.2px;
 }
 #b {
-  
+  position: relative;
   top: 25px;
   padding-left: 17.2px;
 }
 #s {
-  
+  position: relative;
   top: 25px;
   padding-left: 17.2px;
 }
